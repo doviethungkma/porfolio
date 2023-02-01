@@ -1,11 +1,20 @@
 import Sidebar from "./components/shared/Sidebar";
-import Main from "./components/shared/Main";
 import Navbar from "./components/shared/Navbar";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import Content from "./components/shared/Content";
 
 function App() {
-  const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
+  const [isDarkMode, setIsDarkMode] = useState<boolean>(true);
   const [isShowSideBar, setIsShowSideBar] = useState<boolean>(false);
+  const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+  });
 
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);
@@ -16,9 +25,11 @@ function App() {
 
   return (
     <div className={`${isDarkMode && "dark"} app relative flex flex-col `}>
-      <Navbar toggleDarkMode={toggleDarkMode} toggleSideBar={toggleSidebar} />
-      {isShowSideBar && <Sidebar />}
-      <Main />
+      {windowWidth < 1200 && (
+        <Navbar toggleDarkMode={toggleDarkMode} toggleSideBar={toggleSidebar} />
+      )}
+      {(isShowSideBar || windowWidth >= 1200) && <Sidebar />}
+      <Content />
     </div>
   );
 }
