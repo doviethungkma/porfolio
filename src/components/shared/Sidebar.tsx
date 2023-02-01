@@ -44,7 +44,7 @@ const Sidebar = () => {
   const [activeId, setActiveId] = useState<number>(1);
 
   return (
-    <aside className="w-1/2 h-screen fixed bg-white dark:bg-black transition-all border-r border-side-border dark:border-dark-black">
+    <aside className="w-1/2 max-w-[300px] h-screen fixed bg-white dark:bg-black transition-all border-r border-side-border z-40 dark:border-dark-black">
       <div className="logo h-[70px] w-full flex items-center justify-start p-4">
         <h2 className="text-black dark:text-white ">MYPORFOLIO</h2>
       </div>
@@ -55,7 +55,7 @@ const Sidebar = () => {
               key={item.id}
               className={`${
                 activeId === item.id && "text-black dark:text-white"
-              } py-2 flex items-center gap-2`}
+              } py-2 flex items-center gap-2 font-medium`}
             >
               <Icon icon={item.icon as string} />
               <p>{item.name}</p>

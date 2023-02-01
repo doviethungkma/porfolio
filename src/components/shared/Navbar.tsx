@@ -8,7 +8,7 @@ type NavbarPropsType = {
 const Navbar = (props: NavbarPropsType) => {
   const { toggleDarkMode, toggleSideBar } = props;
   return (
-    <nav className="w-full h-[70px] p-4 flex items-center justify-between border-b border-b-slate-100 bg-white dark:bg-navbar">
+    <nav className="w-full h-[70px] p-4 flex items-center justify-between border-b border-b-slate-100 bg-white dark:bg-navbar dark:border-none">
       <h2 className="text-black dark:text-white">MYPORFOLIO</h2>
       <div className="flex gap-4 items-center">
         <div
