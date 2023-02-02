@@ -44,7 +44,7 @@ const Sidebar = () => {
   const [activeId, setActiveId] = useState<number>(1);
 
   return (
-    <aside className="w-1/2 max-w-[300px] h-screen fixed bg-white dark:bg-black transition-all border-r border-side-border z-40 dark:border-dark-black">
+    <aside className="w-1/2 max-w-[300px] h-screen fixed top-0 left-0 bg-white dark:bg-black transition-all border-r border-side-border z-40 dark:border-dark-black">
       <div className="logo h-[70px] w-full flex items-center justify-start p-4">
         <h2 className="text-black dark:text-white ">MYPORFOLIO</h2>
       </div>

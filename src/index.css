@@ -7,9 +7,12 @@
 @layer base {
     body {
         @apply text-[15px];
+        @apply font-normal;
+        @apply leading-[30px];
+        @apply tracking-[.5px];
         @apply font-mulish;
         @apply transition-all;
-        @apply text-txt-gray;
+        @apply text-txt-light;
         @apply box-border;
     }
 }

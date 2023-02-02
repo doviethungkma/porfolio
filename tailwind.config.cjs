@@ -5,11 +5,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "txt-gray": "#767676",
+        "txt-gray": "#BBBBBB",
+        "txt-light": "#767676",
         navbar: "#323232",
         "side-border": "#f9f9f9",
         "dark-black": "#111",
         "light-bg": "#f8f8f8",
+        "border-color": "rgba(255,255,255,0.1)",
       },
       fontFamily: {
         mulish: ["Mulish", "sans-serif"],
