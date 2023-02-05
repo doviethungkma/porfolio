@@ -12,7 +12,7 @@ const typeSequences = [
 
 const Hero = () => {
   return (
-    <section className="w-full flex justify-center">
+    <section className="hero w-full flex justify-center">
       <div className="max-w-[450px] lg:max-w-[830px] min-h-screen xl:h-screen flex flex-col lg:flex-row lg:gap-[80px] items-center gap-4 ">
         <div className="w-[200px] h-[200px] rounded-avatar bg-avatar bg-center bg-cover shadow-avatar animate-avatar md:w-[300px] md:h-[300px]"></div>
         <div className="flex flex-col items-center gap-4 lg:items-start">

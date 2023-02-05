@@ -1,9 +1,11 @@
 import lg_img from "../../assets/images/lg_img.jpg";
 import { shortInfor, studyInfor } from "./../../data/shortInfor";
+import Education from "./Education";
+import Experience from "./Experience";
 
 const About = () => {
   return (
-    <div className="w-full max-w-[990px] font-montserrat">
+    <section className="about w-full max-w-[990px] font-montserrat">
       <h2 className="mb-[70px] text-black dark:text-white text-[30px] font-montserrat font-extrabold capitalize">
         About me
       </h2>
@@ -55,7 +57,14 @@ const About = () => {
           ))}
         </ul>
       </div>
-    </div>
+      <button className="px-[40px] py-[11px] bg-black dark:bg-white mt-10 hover:opacity-80 transition-all text-white dark:text-black">
+        Download CV
+      </button>
+      <div className="flex flex-col justify-between py-5 border-b border-border-color bg-white dark:bg-black mt-[100px]">
+        <Education />
+        <Experience />
+      </div>
+    </section>
   );
 };
 

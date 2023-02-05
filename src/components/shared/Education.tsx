@@ -1,0 +1,29 @@
+import React from "react";
+
+const Education = () => {
+  return (
+    <div className="education font-montserrat px-6">
+      <h4 className="text-[20px] font-bold text-black dark:text-white mb-12">
+        Education
+      </h4>
+      <ul className="relative w-full">
+        <li className="relative w-full pl-6">
+          <div className="flex gap-4 w-full">
+            <span className="inline-block h-10 py-[5px] px-[25px] bg-[rgba(0,0,0,0.05)] dark:bg-[rgba(255,255,255,0.065)] rounded-[50px] text-[#767676] dark:text-white">
+              2013-2019
+            </span>
+            <div className="flex-grow">
+              <p className="text-black dark:text-white text-[16px] font-semibold">
+                Academy of cryptography techniques
+              </p>
+              <p>Engineer Degree</p>
+              <p>2.71/4</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  );
+};
+
+export default Education;
