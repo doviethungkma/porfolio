@@ -15,6 +15,32 @@
         @apply text-txt-light;
         @apply box-border;
     }
+
+    .education ul::before {
+        content: "";
+        @apply absolute;
+        @apply w-[1px];
+        @apply h-full;
+        @apply top-0;
+        @apply left-0;
+        @apply bg-[rgba(0,0,0,0.07)];
+        @apply dark:bg-[#56585c];
+    }
+
+    .education ul li::before {
+        content: "";
+        @apply absolute;
+        @apply w-[18px];
+        @apply h-[18px];
+        @apply rounded-full;
+        @apply border;
+        @apply border-[#ccc];
+        @apply dark:border-[#56585c];
+        @apply left-[-9px];
+        @apply top-2;
+        @apply bg-white;
+        @apply dark:bg-[#000];
+    }
 }
 
 @keyframes morph {

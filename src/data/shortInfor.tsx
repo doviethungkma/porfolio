@@ -31,7 +31,7 @@ export const studyInfor = [
     value: "Good",
   },
   {
-    title: "score",
+    title: "GPA",
     value: "2.71 / 4",
   },
 ];
