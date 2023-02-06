@@ -30,7 +30,7 @@ const Experience = () => {
         <li className="relative w-full pl-6 mt-4">
           <div className="flex flex-col md:flex-row gap-4 w-full">
             <div className="min-w-[180px] w-[180px] flex items-center justify-center h-10 bg-[rgba(0,0,0,0.05)] dark:bg-[rgba(255,255,255,0.065)] rounded-[50px] text-[#767676] dark:text-white">
-              09/2017 - 04/2019
+              11/2020 - 04/2021
             </div>
             <div>
               <p className="text-black dark:text-white text-[16px] font-semibold">

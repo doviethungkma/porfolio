@@ -9,9 +9,9 @@ const Education = () => {
       <ul className="relative w-full">
         <li className="relative w-full pl-6">
           <div className="flex gap-4 w-full">
-            <span className="inline-block h-10 py-[5px] px-[25px] bg-[rgba(0,0,0,0.05)] dark:bg-[rgba(255,255,255,0.065)] rounded-[50px] text-[#767676] dark:text-white">
+            <div className="min-w-[180px] w-[180px] flex items-center justify-center h-10 bg-[rgba(0,0,0,0.05)] dark:bg-[rgba(255,255,255,0.065)] rounded-[50px] text-[#767676] dark:text-white">
               2013-2019
-            </span>
+            </div>
             <div className="flex-grow">
               <p className="text-black dark:text-white text-[16px] font-semibold">
                 Academy of cryptography techniques
