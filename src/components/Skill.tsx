@@ -1,5 +1,6 @@
 import { Icon } from "@iconify/react";
-import { skills } from "../data/skill";
+import { hardSkill, skills } from "../data/skill";
+import { softSkill } from "./../data/skill";
 
 type skillTypes = {
   icon: string;
@@ -23,7 +24,24 @@ const Skill = () => {
           </div>
         ))}
       </div>
-      <div></div>
+      <div className="flex gap-8 flex-col lg:flex-row bg-white dark:bg-black mt-[70px] p-6">
+        <div className="hardskill w-full">
+          <h4 className="text-black dark:text-white text-[18px]">Hardskill</h4>
+          <ul className="mt-4">
+            {hardSkill.map((item: string, index: number) => (
+              <li className="py-2">- {item}</li>
+            ))}
+          </ul>
+        </div>
+        <div className="softskill w-full">
+          <h4 className="text-black dark:text-white text-[18px]">Softskill</h4>
+          <ul className="mt-4">
+            {softSkill.map((item: string, index: number) => (
+              <li className="py-2">- {item}</li>
+            ))}
+          </ul>
+        </div>
+      </div>
     </section>
   );
 };
