@@ -2,10 +2,19 @@ import lg_img from "../../assets/images/lg_img.jpg";
 import { shortInfor, studyInfor } from "./../../data/shortInfor";
 import Education from "./Education";
 import Experience from "./Experience";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const About = () => {
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
   return (
-    <section className="about w-full max-w-[990px] font-montserrat">
+    <section
+      className="about w-full max-w-[990px] font-montserrat  "
+      data-aos="fade-up"
+    >
       <h2 className="mb-[70px] text-black dark:text-white text-[30px] font-montserrat font-extrabold capitalize">
         About me
       </h2>
@@ -15,12 +24,12 @@ const About = () => {
         className="w-full h-auto object-cover mb-9"
       />
       <div className="pb-5 border-b border-border-color">
-        <h3 className="text-[22px] text-black dark:text-white font-bold">
+        <h3 className="text-[22px] text-black dark:text-white font-bold bounceInDown">
           Do Viet Hung
         </h3>
         <p className="dark:text-txt-gray">Web Developer</p>
       </div>
-      <div className="py-5 border-b border-border-color">
+      <div className="py-5 border-b border-border-color" data-aos="fade-up">
         <p className="dark:text-txt-gray">
           Hi, my name is Adriano Smith and I began using WordPress when it first
           began. I’ve spent most of my waking hours for the last ten years
@@ -35,7 +44,10 @@ const About = () => {
           little-to-no maintenance while running on their own for years.
         </p>
       </div>
-      <div className="flex flex-col justify-between md:flex-row py-5 border-b border-border-color">
+      <div
+        className="flex flex-col justify-between md:flex-row py-5 border-b border-border-color"
+        data-aos="fade-up"
+      >
         <ul>
           {shortInfor.map((item, index) => (
             <li key={index}>
@@ -57,7 +69,10 @@ const About = () => {
           ))}
         </ul>
       </div>
-      <button className="px-[40px] py-[11px] bg-black dark:bg-white mt-10 hover:opacity-80 transition-all text-white dark:text-black">
+      <button
+        className="px-[40px] py-[11px] bg-black dark:bg-white mt-10 hover:opacity-80 transition-all text-white dark:text-black"
+        data-aos="fade-up"
+      >
         Download CV
       </button>
       <div className="flex flex-col justify-between py-5 border-b border-border-color bg-white dark:bg-black mt-[100px]">

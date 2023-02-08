@@ -1,6 +1,16 @@
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+
 const Experience = () => {
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
   return (
-    <div className="education font-montserrat px-6 mt-10 w-full">
+    <div
+      className="education font-montserrat px-6 mt-10 w-full"
+      data-aos="zoom-in"
+    >
       <h4 className="text-[20px] font-bold text-black dark:text-white mb-12">
         Experience
       </h4>
