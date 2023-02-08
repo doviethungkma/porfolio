@@ -1,7 +1,9 @@
-import React from "react";
+import { useEffect } from "react";
 import Skill from "../Skill";
 import About from "./About";
+import Contact from "./Contact";
 import Hero from "./Hero";
+import Project from "./Project";
 
 const Content = () => {
   return (
@@ -9,6 +11,8 @@ const Content = () => {
       <Hero />
       <About />
       <Skill />
+      <Project />
+      <Contact />
     </div>
   );
 };

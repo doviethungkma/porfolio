@@ -1,5 +1,8 @@
 import { TypeAnimation } from "react-type-animation";
 import Social from "./Social";
+import { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const typeSequences = [
   "Hi, My name is Hung", // Types 'One'
@@ -11,12 +14,15 @@ const typeSequences = [
 ];
 
 const Hero = () => {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
   return (
-    <section className="hero w-full flex justify-center">
+    <section className="hero w-full flex justify-center" data-aos="zoom-in">
       <div className="max-w-[450px] lg:max-w-[830px] min-h-screen xl:h-screen flex flex-col lg:flex-row lg:gap-[80px] items-center gap-4 ">
         <div className="w-[200px] h-[200px] rounded-avatar bg-avatar bg-center bg-cover shadow-avatar animate-avatar md:w-[300px] md:h-[300px]"></div>
         <div className="flex flex-col items-center gap-4 lg:items-start">
-          <h1 className="text-black text-[35px] font-montserrat font-extrabold dark:text-white">
+          <h1 className="text-black text-[35px] font-montserrat font-extrabold dark:text-white bounceInDown">
             DO VIET HUNG
           </h1>
           <TypeAnimation

@@ -1,7 +1,7 @@
-import Sidebar from "./components/shared/Sidebar";
-import Navbar from "./components/shared/Navbar";
 import { useEffect, useState } from "react";
 import Content from "./components/shared/Content";
+import Navbar from "./components/shared/Navbar";
+import Sidebar from "./components/shared/Sidebar";
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState<boolean>(true);
