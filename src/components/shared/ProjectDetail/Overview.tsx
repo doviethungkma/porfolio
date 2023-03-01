@@ -8,7 +8,7 @@ const Overview = (props: OverviewPropsType) => {
   const { overview } = props;
   return (
     <div className="overview mt-[70px]">
-      <h2 className="text-[30px] text-black dark:text-white mb-[30px]">
+      <h2 className="text-[26px] text-black dark:text-white mb-[30px]">
         Overview
       </h2>
       <div className="flex flex-col md:flex-row gap-6">
