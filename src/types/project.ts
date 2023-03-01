@@ -1,13 +1,11 @@
 export type projectTypes = {
-  overview: overviewTypes;
-  responsibility: string[];
-  description: descriptionType;
-  demo?: demoType;
-  link?: {
-    admin?: string;
-    client?: string;
-    github?: string;
-  };
+  isClickable: boolean;
+  overview?: overviewTypes;
+  responsibility?: string[];
+  description?: descriptionType;
+  demo?: demoType[];
+  link?: LinkType[];
+  account?: AccountType[];
 };
 
 export type overviewTypes = {
@@ -31,4 +29,16 @@ export type descriptionType = {
 
 export type demoType = {
   url?: string;
+  title?: string;
+};
+
+export type LinkType = {
+  title?: string;
+  url?: string;
+};
+
+export type AccountType = {
+  username: string;
+  password: string;
+  role: string;
 };

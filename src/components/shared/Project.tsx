@@ -7,9 +7,7 @@ import ProjectDetail from "./ProjectDetail/ProjectDetail";
 
 const Project = () => {
   const [isShowProjectModal, setIsShowProjectModal] = useState<boolean>(false);
-  const [activeItem, setActiveItem] = useState<projectTypes>(
-    {} as projectTypes
-  );
+  const [activeItem, setActiveItem] = useState<projectTypes>();
 
   const onCloseModal = () => {
     setIsShowProjectModal(false);
@@ -41,29 +39,31 @@ const Project = () => {
               data-aos="zoom-in"
             >
               <img
-                src={item.overview.thumb}
+                src={item?.overview?.thumb}
                 alt=""
                 className="w-full md:w-1/2 max-w-full object-cover"
               />
               <div className="w-full p-4">
                 <h4 className="text-[20px] font-bold text-black dark:text-white">
-                  {item.overview.name}
+                  {item.overview?.name}
                 </h4>
                 <h5 className="text-black dark:text-white">
-                  {item.overview.role}
+                  {item.overview?.role}
                 </h5>
-                <p>{item.overview.short_description}</p>
+                <p>{item.overview?.short_description}</p>
                 <ul>
-                  {item.overview.tech.map((tech: string, index: number) => (
+                  {item.overview?.tech.map((tech: string, index: number) => (
                     <li key={index}>- {tech}</li>
                   ))}
                 </ul>
-                <button
-                  className="px-[40px] py-[4px] bg-black dark:bg-white mt-10 hover:opacity-80 transition-all text-white dark:text-black"
-                  onClick={() => onShowModal(item)}
-                >
-                  Detail
-                </button>
+                {item.isClickable && (
+                  <button
+                    className="px-[40px] py-[4px] bg-black dark:bg-white mt-10 hover:opacity-80 transition-all text-white dark:text-black"
+                    onClick={() => onShowModal(item)}
+                  >
+                    Detail
+                  </button>
+                )}
               </div>
             </div>
             {isShowProjectModal && (
